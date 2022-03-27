@@ -38,13 +38,11 @@ public void repartition_circulaire(World world,int rayon,Player sender,int divis
                 Location coordonee_2 = new Location(world,x_i - 1.0 , y_i, z_i + 1.0);
                 Cuboid plateforme = new Cuboid(coordonee_1, coordonee_2);
                 for(Block block : plateforme){
-                    block.setType(Material.ACACIA_PLANKS);
+                    block.setType(Material.RED_STAINED_GLASS);
 
                 }
 
-
-                world.getBlockAt(new Location(world, x_i, y_i, z_i)).setType(Material.GOLD_BLOCK);
-                sender.sendMessage("i = " + i);
+                sender.sendMessage(n + "plateformes ont été crées");
 
             }
     }
